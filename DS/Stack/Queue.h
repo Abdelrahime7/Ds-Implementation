@@ -55,6 +55,13 @@ public:
         queueSize--;
     }
 
+    T Peek() {
+        if (count == 0) {
+            throw std::out_of_range("Queue is empty");
+        }
+        return queueArr[front];
+    }
+
     // Print queue
     void Print() const {
         for (int i = 0; i < queueSize; i++) {
